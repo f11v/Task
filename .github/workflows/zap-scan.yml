@@ -27,7 +27,7 @@ jobs:
         cmd_options: '-I -r report.html'
 
     - name: Upload ZAP Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: zap-report
         path: report.html
