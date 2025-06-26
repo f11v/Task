@@ -1,0 +1,20 @@
+
+<!doctype html>
+<title>Task Manager</title>
+<h1>Tasks</h1>
+<ul>
+  {% for task in tasks %}
+    <li>
+      {{ task }}
+      <form method="post" action="/edit/{{ loop.index0 }}" style="display:inline;">
+        <input name="task" placeholder="Edit task">
+        <button type="submit">Edit</button>
+      </form>
+      <a href="/delete/{{ loop.index0 }}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
+<form method="post" action="/add">
+  <input name="task" placeholder="New task">
+  <button type="submit">Add Task</button>
+</form>
