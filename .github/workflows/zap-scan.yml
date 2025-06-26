@@ -16,7 +16,7 @@ jobs:
 
     - name: Set up Docker Compose
       run: |
-        docker-compose up -d
+        docker compose up -d
         echo "Waiting for the app to be ready..."
         sleep 20
 
